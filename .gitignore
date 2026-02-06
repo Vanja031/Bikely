@@ -1,0 +1,11 @@
+.env
+
+package-lock.json
+node_modules
+
+# Lokalni razvojni guide i dokumentacija (ne ide na GitHub)
+README_INTERNAL.md
+DESIGN_GUIDE_ADMIN.md
+DESIGN_GUIDE_USER.md
+tekst.txt
+Fukncionalnosti.pdf
