@@ -70,6 +70,37 @@ cd web
 npm install
 ```
 
+**Konfiguracija Google Maps API:**
+
+Za funkcionalnost odabira lokacije bicikla, potrebno je konfigurisati Google Maps API:
+
+1. Kreiraj `.env` fajl u `web/` folderu:
+```bash
+VITE_GOOGLE_MAPS_API_KEY=tvoj-api-key-ovde
+```
+
+2. **Google Cloud Console setup:**
+   - Idite na [Google Cloud Console](https://console.cloud.google.com/)
+   - Kreirajte novi projekat ili izaberite postojeći
+   - U **APIs & Services > Library**, enable-ujte sledeće servise:
+     - ✅ **Maps JavaScript API** (obavezno)
+     - ✅ **Geocoding API** (obavezno, za prikaz adrese umesto koordinata)
+     - ✅ **Places API** (opciono, za autocomplete pretragu lokacija)
+   - U **APIs & Services > Credentials**, kreirajte **API Key**
+   - **VAŽNO za development:** Ograničite API key na:
+     - **Application restrictions**: HTTP referrers (web sites)
+     - Dodajte sledeće referrere:
+       - `http://localhost:*`
+       - `http://127.0.0.1:*`
+       - `http://localhost:5173/*` (za Vite dev server)
+     - **API restrictions**: Maps JavaScript API, Geocoding API (i Places API ako koristiš)
+   
+   **Napomena:** Ako dobijate grešku "This page can't load Google Maps correctly", proverite da li su gore navedeni domeni dodati u HTTP referrers listu.
+
+3. Dodaj API key u `web/.env` fajl kao `VITE_GOOGLE_MAPS_API_KEY`
+
+**Napomena:** Bez API key-a, lokacija se može uneti ručno preko lat/lng polja, ali Google Maps picker neće raditi.
+
 Pokretanje dev servera:
 
 ```bash
