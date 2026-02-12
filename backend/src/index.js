@@ -8,13 +8,16 @@ import { fileURLToPath } from "url";
 import adminAuthRoutes from "./routes/adminAuthRoutes.js";
 import adminBikeRoutes from "./routes/adminBikeRoutes.js";
 import adminParkingRoutes from "./routes/adminParkingRoutes.js";
+import adminIssueRoutes from "./routes/adminIssueRoutes.js";
 import adminRentalRoutes from "./routes/adminRentalRoutes.js";
+import adminStatsRoutes from "./routes/adminStatsRoutes.js";
 import userAuthRoutes from "./routes/userAuthRoutes.js";
 import userBikeRoutes from "./routes/userBikeRoutes.js";
 import userRentalRoutes from "./routes/userRentalRoutes.js";
 import userNotificationRoutes from "./routes/userNotificationRoutes.js";
 import userProfileRoutes from "./routes/userProfileRoutes.js";
 import userParkingRoutes from "./routes/userParkingRoutes.js";
+import userIssueRoutes from "./routes/userIssueRoutes.js";
 import { Admin } from "./models/Admin.js";
 
 dotenv.config();
@@ -42,12 +45,15 @@ app.use("/api/admin/auth", adminAuthRoutes);
 app.use("/api/admin/bikes", adminBikeRoutes);
 app.use("/api/admin/parking", adminParkingRoutes);
 app.use("/api/admin/rentals", adminRentalRoutes);
+app.use("/api/admin/issues", adminIssueRoutes);
+app.use("/api/admin/stats", adminStatsRoutes);
 app.use("/api/user/auth", userAuthRoutes);
 app.use("/api/user/bikes", userBikeRoutes);
 app.use("/api/user/rentals", userRentalRoutes);
 app.use("/api/user/notifications", userNotificationRoutes);
 app.use("/api/user/profile", userProfileRoutes);
 app.use("/api/user/parking", userParkingRoutes);
+app.use("/api/user/issues", userIssueRoutes);
 
 // Health check / basic route
 app.get("/", (req, res) => {

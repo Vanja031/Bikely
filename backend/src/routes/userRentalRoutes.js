@@ -181,7 +181,7 @@ router.post("/:id/end", requireUser, async (req, res) => {
     
     // Računaj tačnu cenu na osnovu stvarnog trajanja (bez zaokruživanja)
     const billedHours = Math.max(0, durationHours); // Osiguraj samo da nije negativno
-    const totalCost = billedHours * bike.hourlyRate;
+    const totalCost = Math.round((billedHours * bike.hourlyRate) * 100) / 100;
     
     // Validacija da totalCost nije NaN ili undefined
     if (isNaN(totalCost) || totalCost < 0) {

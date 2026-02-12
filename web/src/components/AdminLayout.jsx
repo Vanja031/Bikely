@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "../App.css";
-import { getAdminToken, setAdminToken } from "../api";
+import { getAdminToken, setAdminToken, fetchAdminUnresolvedIssueCount } from "../api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBicycle,
@@ -9,9 +10,11 @@ import {
   faRightFromBracket,
   faUserShield,
   faMapMarkerAlt,
+  faHome,
 } from "@fortawesome/free-solid-svg-icons";
 
 const navItems = [
+  { to: "/admin", label: "Dashboard", icon: faHome },
   { to: "/admin/bikes", label: "Bicikli", icon: faBicycle },
   { to: "/admin/parking", label: "Parking mesta", icon: faMapMarkerAlt },
   { to: "/admin/rentals", label: "Iznajmljivanja", icon: faChartLine },
@@ -22,6 +25,39 @@ export function AdminLayout() {
   const location = useLocation();
   const navigate = useNavigate();
   const token = getAdminToken();
+
+  const [unresolvedIssues, setUnresolvedIssues] = useState(0);
+
+  useEffect(() => {
+    let cancelled = false;
+    const loadCount = async () => {
+      try {
+        const data = await fetchAdminUnresolvedIssueCount();
+        if (!cancelled) {
+          setUnresolvedIssues(data?.count ?? 0);
+        }
+      } catch {
+        if (!cancelled) {
+          setUnresolvedIssues(0);
+        }
+      }
+    };
+
+    loadCount();
+    const interval = setInterval(loadCount, 30000);
+    
+    // Listen for issue status updates
+    const handleIssueStatusUpdate = () => {
+      loadCount();
+    };
+    window.addEventListener("issueStatusUpdated", handleIssueStatusUpdate);
+    
+    return () => {
+      cancelled = true;
+      clearInterval(interval);
+      window.removeEventListener("issueStatusUpdated", handleIssueStatusUpdate);
+    };
+  }, []);
 
   if (!token) {
     navigate("/admin/login");
@@ -44,20 +80,34 @@ export function AdminLayout() {
           </div>
         </div>
         <nav className="sidebar-nav">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              className={({ isActive }) =>
-                ["nav-link", isActive ? "active" : ""].filter(Boolean).join(" ")
-              }
-            >
-              <span className="nav-icon">
-                <FontAwesomeIcon icon={item.icon} />
-              </span>
-              <span>{item.label}</span>
-            </NavLink>
-          ))}
+          {navItems.map((item) => {
+            const showIssuesBadge = item.to === "/admin/issues" && unresolvedIssues > 0;
+            return (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={({ isActive, location }) => {
+                  // For dashboard, only active if exactly on /admin
+                  if (item.to === "/admin") {
+                    const isDashboardActive = location.pathname === "/admin";
+                    return ["nav-link", isDashboardActive ? "active" : ""].filter(Boolean).join(" ");
+                  }
+                  // For other routes, use default isActive behavior
+                  return ["nav-link", isActive ? "active" : ""].filter(Boolean).join(" ");
+                }}
+              >
+                <span className="nav-icon">
+                  <FontAwesomeIcon icon={item.icon} />
+                </span>
+                <span style={{ flex: 1 }}>{item.label}</span>
+                {showIssuesBadge && (
+                  <span className="nav-badge">
+                    {unresolvedIssues > 99 ? "99+" : unresolvedIssues}
+                  </span>
+                )}
+              </NavLink>
+            );
+          })}
         </nav>
         <div className="sidebar-footer">
           <button className="sidebar-logout-btn" onClick={handleLogout}>
@@ -71,7 +121,7 @@ export function AdminLayout() {
       <div className="app-main">
         <header className="app-header">
           <div className="app-header-title">
-            {currentNav ? currentNav.label : "Kontrolna tabla"}
+            {currentNav ? currentNav.label : location.pathname === "/admin" ? "Kontrolna tabla" : "Kontrolna tabla"}
           </div>
           <div className="app-header-user">
             <div className="app-header-avatar">

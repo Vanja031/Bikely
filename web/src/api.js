@@ -47,6 +47,24 @@ export function adminLogin(email, password) {
   });
 }
 
+// Admin problem reports
+export function fetchAdminIssues({ status } = {}) {
+  const query = status ? `?status=${encodeURIComponent(status)}` : "";
+  return request(`/api/admin/issues${query}`, { auth: true });
+}
+
+export function fetchAdminUnresolvedIssueCount() {
+  return request("/api/admin/issues/unresolved-count", { auth: true });
+}
+
+export function updateAdminIssueStatus(id, action, resolutionNote) {
+  return request(`/api/admin/issues/${id}/status`, {
+    method: "PUT",
+    body: { action, resolutionNote },
+    auth: true,
+  });
+}
+
 export function fetchBikes() {
   return request("/api/admin/bikes", { auth: true });
 }
@@ -101,5 +119,11 @@ export function fetchAdminRentals() {
 
 export function fetchAdminRentalDetails(id) {
   return request(`/api/admin/rentals/${id}`, { auth: true });
+}
+
+// Admin dashboard statistics
+export function fetchAdminStats(monthOffset = 0) {
+  const query = monthOffset ? `?monthOffset=${monthOffset}` : "";
+  return request(`/api/admin/stats${query}`, { auth: true });
 }
 

@@ -1,6 +1,7 @@
 import express from "express";
 import bcrypt from "bcrypt";
 import { User } from "../models/User.js";
+import { Notification } from "../models/Notification.js";
 import { signUserToken } from "../middleware/authUser.js";
 
 const router = express.Router();
@@ -36,6 +37,14 @@ router.post("/register", async (req, res) => {
       firstName,
       lastName,
       phone,
+    });
+
+    // Create welcome notification
+    await Notification.create({
+      user: user._id,
+      title: "Dobrodošli u Bikely",
+      message: "Hvala što ste se registrovali. Uživajte u vožnji!",
+      type: "info",
     });
 
     const token = signUserToken(user);

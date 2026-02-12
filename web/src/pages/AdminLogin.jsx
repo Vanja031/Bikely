@@ -21,7 +21,7 @@ export function AdminLogin() {
       const result = await adminLogin(email, password);
       setAdminToken(result.token);
       toast.success("Uspešno ste se prijavili");
-      navigate("/admin/bikes");
+      navigate("/admin");
     } catch (err) {
       toast.error(err.message || "Greška pri prijavi");
     } finally {

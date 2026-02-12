@@ -156,15 +156,6 @@ export function AdminRentals() {
             <span className="rentals-stat-value">{activeCount}</span>
           </div>
         </div>
-        <div className="rentals-stat-card">
-          <div className="rentals-stat-icon" style={{ backgroundColor: "#E8F5E9", color: "#4CAF50" }}>
-            <FontAwesomeIcon icon={faCheckCircle} />
-          </div>
-          <div className="rentals-stat-content">
-            <span className="rentals-stat-label">Završena</span>
-            <span className="rentals-stat-value">{completedCount}</span>
-          </div>
-        </div>
       </div>
 
       <div className="filter-bar">

@@ -25,7 +25,8 @@ async function generateBikeQrCode(bike) {
     width: 512,
   });
 
-  return filePath;
+  // Return relative path instead of absolute
+  return path.join("storage", "qrcodes", fileName);
 }
 
 // GET /api/admin/bikes
