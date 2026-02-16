@@ -164,6 +164,57 @@ router.get("/", requireAdmin, async (req, res) => {
       },
     ]);
 
+    // Rentals by duration (completed rentals only)
+    const rentalsByDurationRaw = await Rental.aggregate([
+      {
+        $match: {
+          status: "completed",
+          startTime: { $exists: true },
+          endTime: { $exists: true },
+        },
+      },
+      {
+        $project: {
+          durationMinutes: {
+            $divide: [
+              { $subtract: ["$endTime", "$startTime"] },
+              1000 * 60, // Convert milliseconds to minutes
+            ],
+          },
+        },
+      },
+      {
+        $group: {
+          _id: {
+            $cond: [
+              { $lt: ["$durationMinutes", 20] },
+              "0-20min",
+              {
+                $cond: [
+                  { $lt: ["$durationMinutes", 60] },
+                  "20-1h",
+                  {
+                    $cond: [
+                      { $lt: ["$durationMinutes", 120] },
+                      "1h-2h",
+                      "2h+",
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          count: { $sum: 1 },
+        },
+      },
+    ]);
+
+    // Sort manually to ensure correct order
+    const orderMap = { "0-20min": 1, "20-1h": 2, "1h-2h": 3, "2h+": 4 };
+    const rentalsByDuration = rentalsByDurationRaw.sort((a, b) => {
+      return (orderMap[a._id] || 999) - (orderMap[b._id] || 999);
+    });
+
     // Total revenue (all time)
     const totalRevenueResult = await Rental.aggregate([
       {
@@ -225,6 +276,7 @@ router.get("/", requireAdmin, async (req, res) => {
         revenueByMonth: revenueByMonth,
         bikesByStatus: bikesByStatus,
         problemsByStatus: problemsByStatus,
+        rentalsByDuration: rentalsByDuration,
       },
       stats: {
         totalRevenue: totalRevenue,

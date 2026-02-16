@@ -124,7 +124,6 @@ export function AdminRentals() {
     <div>
       <div className="bikes-header">
         <div>
-          <div className="bikes-title">Iznajmljivanja</div>
           <div style={{ fontSize: 14, color: "var(--text-light)" }}>
             Pregled svih iznajmljivanja sa mobilne aplikacije.
           </div>
@@ -177,7 +176,6 @@ export function AdminRentals() {
             { value: "all", label: "Svi statusi", color: "#757575", bgColor: "#f5f5f5" },
             { value: "active", label: "Aktivna", color: "#2196F3", bgColor: "#E3F2FD" },
             { value: "completed", label: "Završena", color: "#4CAF50", bgColor: "#E8F5E9" },
-            { value: "cancelled", label: "Otkazana", color: "#757575", bgColor: "#EEEEEE" },
           ]}
           getOptionStyle={(option) => {
             if (option.value === "all") {

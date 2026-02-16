@@ -153,6 +153,14 @@ export function AdminIssues() {
 
   return (
     <div>
+
+      <div className="bikes-header">
+        <div>
+          <div style={{ fontSize: 14, color: "var(--text-light)" }}>
+            Pregled svih prijava problema sa mobilne aplikacije.
+          </div>
+        </div>
+      </div>
       {error && (
         <div className="error-text" style={{ marginBottom: 12 }}>
           {error}

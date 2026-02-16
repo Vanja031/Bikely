@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "6985e5dd5523cee12b263076"
+  },
+  "email": "admin@gmail.com",
+  "passwordHash": "$2b$10$En0H955KyuHNgBUuMoOg0OPuNVZeQL8ImII7FunGTJIoOvwDWxzje",
+  "name": "Bikely Admin",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2026-02-06T13:00:13.473Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-16T13:32:24.482Z"
+  },
+  "__v": 0
+}]

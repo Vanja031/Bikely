@@ -24,6 +24,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
+// mongorestore --db bikely dump-bikely/bikely
 const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/bikely";
 
 app.use(

@@ -60,7 +60,6 @@ export function AdminDashboard() {
   
   // State for rentals chart
   const [rentalsMonthOffset, setRentalsMonthOffset] = useState(0);
-  const [rentalsViewMode, setRentalsViewMode] = useState("month");
   const [rentalsMonthData, setRentalsMonthData] = useState(null);
 
   // Helper function to load month-specific data
@@ -104,20 +103,16 @@ export function AdminDashboard() {
 
   // Load month data when monthOffset changes for rentals
   useEffect(() => {
-    if (rentalsViewMode === "month") {
-      let cancelled = false;
-      loadMonthData(rentalsMonthOffset).then((data) => {
-        if (!cancelled && data) {
-          setRentalsMonthData(data);
-        }
-      });
-      return () => {
-        cancelled = true;
-      };
-    } else {
-      setRentalsMonthData(null);
-    }
-  }, [rentalsMonthOffset, rentalsViewMode]);
+    let cancelled = false;
+    loadMonthData(rentalsMonthOffset).then((data) => {
+      if (!cancelled && data) {
+        setRentalsMonthData(data);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [rentalsMonthOffset]);
 
 
   if (loading) {
@@ -168,55 +163,29 @@ export function AdminDashboard() {
     ],
   };
 
-  const problemsByStatusData = {
-    labels: (stats.charts.problemsByStatus || []).map((item) => {
-      const statusMap = {
-        open: "Otvorene",
-        in_progress: "U toku",
-        resolved: "Rešene",
-      };
-      return statusMap[item._id] || item._id;
-    }),
+  const rentalsByDurationData = {
+    labels: (stats.charts.rentalsByDuration || []).map((item) => item._id || "Nepoznat"),
     datasets: [
       {
-        label: "Broj problema",
-        data: (stats.charts.problemsByStatus || []).map((item) => item.count),
-        backgroundColor: ["#FF9800", "#2196F3", "#4CAF50"],
+        label: "Broj iznajmljivanja",
+        data: (stats.charts.rentalsByDuration || []).map((item) => item.count),
+        backgroundColor: ["#4CAF50", "#2196F3", "#FF9800", "#9C27B0"],
       },
     ],
   };
 
   // Prepare rentals chart data
-  const rentalsData = rentalsViewMode === "month" 
-    ? rentalsMonthData && rentalsMonthData.charts && rentalsMonthData.charts.rentalsCurrentMonth
-      ? {
-          labels: rentalsMonthData.charts.rentalsCurrentMonth.map((item) => {
-            const [year, month, day] = item._id.split("-");
-            const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
-            return date.toLocaleDateString("sr-Latn-RS", { day: "numeric" });
-          }),
-          datasets: [
-            {
-              label: "Iznajmljivanja",
-              data: rentalsMonthData.charts.rentalsCurrentMonth.map((item) => item.count || 0),
-              borderColor: "#4CAF50",
-              backgroundColor: "rgba(76, 175, 80, 0.1)",
-              tension: 0.4,
-            },
-          ],
-        }
-      : { labels: [], datasets: [{ label: "Iznajmljivanja", data: [], borderColor: "#4CAF50", backgroundColor: "rgba(76, 175, 80, 0.1)", tension: 0.4 }] }
-    : stats && stats.charts && stats.charts.rentalsByMonth
+  const rentalsData = rentalsMonthData && rentalsMonthData.charts && rentalsMonthData.charts.rentalsCurrentMonth
     ? {
-        labels: stats.charts.rentalsByMonth.map((item) => {
-          const [year, month] = item._id.split("-");
-          const date = new Date(parseInt(year), parseInt(month) - 1);
-          return date.toLocaleDateString("sr-Latn-RS", { month: "short", year: "numeric" });
+        labels: rentalsMonthData.charts.rentalsCurrentMonth.map((item) => {
+          const [year, month, day] = item._id.split("-");
+          const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+          return date.toLocaleDateString("sr-Latn-RS", { day: "numeric" });
         }),
         datasets: [
           {
             label: "Iznajmljivanja",
-            data: stats.charts.rentalsByMonth.map((item) => item.count || 0),
+            data: rentalsMonthData.charts.rentalsCurrentMonth.map((item) => item.count || 0),
             borderColor: "#4CAF50",
             backgroundColor: "rgba(76, 175, 80, 0.1)",
             tension: 0.4,
@@ -257,7 +226,6 @@ export function AdminDashboard() {
     <div className="dashboard-container">
       <div className="dashboard-header">
         <div>
-          <div className="bikes-title">Kontrolna tabla</div>
           <div style={{ fontSize: 14, color: "var(--text-light)" }}>
             Pregled statistika i aktivnosti sistema
           </div>
@@ -410,9 +378,9 @@ export function AdminDashboard() {
         </div>
 
         <div className="dashboard-chart-card">
-          <h3 className="dashboard-chart-title">Problemi po statusu</h3>
+          <h3 className="dashboard-chart-title">Iznajmljivanja po trajanju</h3>
           <div className="dashboard-chart-container">
-            <Doughnut data={problemsByStatusData} options={doughnutOptions} />
+            <Doughnut data={rentalsByDurationData} options={doughnutOptions} />
           </div>
         </div>
       </div>
@@ -425,37 +393,23 @@ export function AdminDashboard() {
               Broj iznajmljivanja po danima
             </h3>
             <div className="dashboard-chart-controls">
-              {rentalsViewMode === "month" && (
-                <select
-                  value={rentalsMonthOffset}
-                  onChange={(e) => {
-                    setRentalsMonthOffset(parseInt(e.target.value));
-                  }}
-                  className="dashboard-select"
-                >
-                  {[0, 1, 2, 3, 4, 5, 6].map((offset) => {
-                    const date = new Date();
-                    date.setMonth(date.getMonth() - offset);
-                    return (
-                      <option key={offset} value={offset}>
-                        {date.toLocaleDateString("sr-Latn-RS", { month: "long", year: "numeric" })}
-                      </option>
-                    );
-                  })}
-                </select>
-              )}
-              <button
-                className={`dashboard-view-btn ${rentalsViewMode === "month" ? "active" : ""}`}
-                onClick={() => setRentalsViewMode("month")}
+              <select
+                value={rentalsMonthOffset}
+                onChange={(e) => {
+                  setRentalsMonthOffset(parseInt(e.target.value));
+                }}
+                className="dashboard-select"
               >
-                Mesec
-              </button>
-              <button
-                className={`dashboard-view-btn ${rentalsViewMode === "6months" ? "active" : ""}`}
-                onClick={() => setRentalsViewMode("6months")}
-              >
-                6 Meseci
-              </button>
+                {[0, 1, 2, 3, 4, 5, 6].map((offset) => {
+                  const date = new Date();
+                  date.setMonth(date.getMonth() - offset);
+                  return (
+                    <option key={offset} value={offset}>
+                      {date.toLocaleDateString("sr-Latn-RS", { month: "long", year: "numeric" })}
+                    </option>
+                  );
+                })}
+              </select>
             </div>
           </div>
           <div className="dashboard-chart-container">

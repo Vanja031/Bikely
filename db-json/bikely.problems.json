@@ -1,0 +1,129 @@
+[{
+  "_id": {
+    "$oid": "698b37dccc8a1cf43e91b93c"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "bike": {
+    "$oid": "6985ec055523cee12b26309c"
+  },
+  "title": "Problem sa biciklom Test 1",
+  "type": "bike",
+  "location": {
+    "lat": 44.798960612735215,
+    "lng": 20.506228820702862
+  },
+  "description": "Ne rade kocnice",
+  "photos": [
+    "problem-photos/problem-698b37dccc8a1cf43e91b93c-0.jpg",
+    "problem-photos/problem-698b37dccc8a1cf43e91b93c-1.jpg"
+  ],
+  "status": "resolved",
+  "createdAt": {
+    "$date": "2026-02-10T13:51:24.320Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T14:13:04.402Z"
+  },
+  "__v": 1,
+  "resolvedAt": {
+    "$date": "2026-02-10T14:13:04.397Z"
+  },
+  "resolvedBy": {
+    "$oid": "6985e5dd5523cee12b263076"
+  }
+},
+{
+  "_id": {
+    "$oid": "698b3ce497ab664cb3f1f6b6"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "bike": {
+    "$oid": "6985ec055523cee12b26309c"
+  },
+  "title": "Problem sa biciklom Test 1",
+  "type": "bike",
+  "location": {
+    "lat": 44.798960612735215,
+    "lng": 20.506228820702862
+  },
+  "description": "Guma je busna",
+  "photos": [
+    "problem-photos/problem-698b3ce497ab664cb3f1f6b6-0.jpg"
+  ],
+  "status": "resolved",
+  "createdAt": {
+    "$date": "2026-02-10T14:12:52.448Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T14:13:59.420Z"
+  },
+  "__v": 1,
+  "resolvedAt": {
+    "$date": "2026-02-10T14:13:59.417Z"
+  },
+  "resolvedBy": {
+    "$oid": "6985e5dd5523cee12b263076"
+  }
+},
+{
+  "_id": {
+    "$oid": "69931f1821d1f89e79f15335"
+  },
+  "user": {
+    "$oid": "69931d6e21d1f89e79f15252"
+  },
+  "bike": {
+    "$oid": "6985ec625523cee12b2630a2"
+  },
+  "title": "Problem sa biciklom Test 2",
+  "type": "bike",
+  "location": {
+    "lat": 44.798887322040144,
+    "lng": 20.50624682524015
+  },
+  "description": "Volan je pokvaren",
+  "photos": [
+    "problem-photos/problem-69931f1821d1f89e79f15335-0.jpg"
+  ],
+  "status": "open",
+  "createdAt": {
+    "$date": "2026-02-16T13:43:52.572Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-16T13:43:52.575Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "69931f7621d1f89e79f15359"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "bike": {
+    "$oid": "6985f1965523cee12b2630c2"
+  },
+  "title": "Problem sa biciklom Bajs",
+  "type": "bike",
+  "location": {
+    "lat": 44.815281895587006,
+    "lng": 20.491861413182093
+  },
+  "description": "Kocnice ne rade dobro, prednja pogotovu",
+  "photos": [
+    "problem-photos/problem-69931f7621d1f89e79f15359-0.jpg"
+  ],
+  "status": "open",
+  "createdAt": {
+    "$date": "2026-02-16T13:45:26.263Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-16T13:45:26.270Z"
+  },
+  "__v": 1
+}]

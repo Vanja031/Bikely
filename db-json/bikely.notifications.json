@@ -1,0 +1,635 @@
+[{
+  "_id": {
+    "$oid": "698a46c947c083c3c3f8a0bb"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Bicikl Obican",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a46c947c083c3c3f8a0b8"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T20:42:49.951Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T20:43:28.681Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a471247c083c3c3f8a0e2"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 700 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a46c947c083c3c3f8a0b8"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T20:44:02.112Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T20:44:27.477Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a4b00ef0f3951bbdbac90"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Bajs",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a4b00ef0f3951bbdbac8d"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T21:00:48.884Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T21:18:36.270Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a4da8ef0f3951bbdbacdf"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 1500 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a4b00ef0f3951bbdbac8d"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T21:12:08.553Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T21:18:36.270Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a51412c88de6dc161f880"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test 1",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a51412c88de6dc161f87d"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T21:27:29.772Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T21:51:11.688Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a52f2fb5d6f525b829908"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 250 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a51412c88de6dc161f87d"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T21:34:42.633Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T21:51:11.688Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a56deb9b235c7cf30cd27"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test 1",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a56deb9b235c7cf30cd24"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T21:51:26.505Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T22:22:04.815Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a58beb9b235c7cf30cd63"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 250 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a56deb9b235c7cf30cd24"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T21:59:26.726Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T22:22:04.815Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a5a50881d9af776d23679"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test 1",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a5a50881d9af776d23676"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T22:06:08.677Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T22:22:04.815Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a5c41881d9af776d236b3"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 250 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a5a50881d9af776d23676"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T22:14:25.486Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T22:22:04.815Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a5d10881d9af776d236e7"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test 1",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a5d10881d9af776d236e4"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T22:17:52.059Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T22:22:04.815Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a5d57881d9af776d236f6"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 250 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a5d10881d9af776d236e4"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T22:19:03.320Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T22:22:04.815Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a5dfe57b9af7f0667d663"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test 1",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a5dfe57b9af7f0667d660"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T22:21:50.676Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T22:22:04.815Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a5e5a57b9af7f0667d681"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 250 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a5dfe57b9af7f0667d660"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T22:23:22.161Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T13:51:35.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a5f0cfce84e380ced0308"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test 1",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a5f0cfce84e380ced0305"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T22:26:20.653Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T13:51:35.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a5f55fce84e380ced0314"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 250 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a5f0cfce84e380ced0305"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T22:27:33.471Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T13:51:35.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a5f93fce84e380ced0323"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test 1",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a5f93fce84e380ced0320"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T22:28:35.397Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T13:51:35.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698a60badda7f26f484d67a5"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 20.465 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698a5f93fce84e380ced0320"
+  },
+  "createdAt": {
+    "$date": "2026-02-09T22:33:30.104Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T13:51:35.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698b44bddcd46cf693b77df1"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test QR Koda",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698b44bddcd46cf693b77dee"
+  },
+  "createdAt": {
+    "$date": "2026-02-10T14:46:21.869Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T14:49:43.141Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698b450adcd46cf693b77e18"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 21.259166666666665 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698b44bddcd46cf693b77dee"
+  },
+  "createdAt": {
+    "$date": "2026-02-10T14:47:38.403Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T14:49:42.666Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698b45c7ab61746ef7a19a47"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test QR Koda",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698b45c7ab61746ef7a19a44"
+  },
+  "createdAt": {
+    "$date": "2026-02-10T14:50:47.400Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T10:28:08.228Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698b469eab61746ef7a19a73"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 59.714999999999996 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698b45c7ab61746ef7a19a44"
+  },
+  "createdAt": {
+    "$date": "2026-02-10T14:54:22.376Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T10:28:08.228Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698b47385eaa5641279e41f1"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test QR Koda",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698b47385eaa5641279e41ee"
+  },
+  "createdAt": {
+    "$date": "2026-02-10T14:56:56.285Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T10:28:08.228Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698b47505eaa5641279e420b"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 7 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698b47385eaa5641279e41ee"
+  },
+  "createdAt": {
+    "$date": "2026-02-10T14:57:20.626Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T10:28:08.228Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698dab8268a46f8545d67321"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test QR Koda",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698dab8268a46f8545d6731e"
+  },
+  "createdAt": {
+    "$date": "2026-02-12T10:29:22.641Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T10:30:24.363Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698daba968a46f8545d67334"
+  },
+  "user": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 10.86 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "698dab8268a46f8545d6731e"
+  },
+  "createdAt": {
+    "$date": "2026-02-12T10:30:01.720Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T10:30:23.673Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69931d6e21d1f89e79f15254"
+  },
+  "user": {
+    "$oid": "69931d6e21d1f89e79f15252"
+  },
+  "title": "Dobrodošli u Bikely",
+  "message": "Hvala što ste se registrovali. Uživajte u vožnji!",
+  "type": "info",
+  "read": true,
+  "createdAt": {
+    "$date": "2026-02-16T13:36:47.000Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-16T13:36:53.590Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69931d9f21d1f89e79f15274"
+  },
+  "user": {
+    "$oid": "69931d6e21d1f89e79f15252"
+  },
+  "title": "Iznajmljivanje započeto",
+  "message": "Uspešno ste započeli iznajmljivanje bicikla Test 2",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "69931d9f21d1f89e79f15271"
+  },
+  "createdAt": {
+    "$date": "2026-02-16T13:37:35.098Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-16T13:41:42.604Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69931e8421d1f89e79f15313"
+  },
+  "user": {
+    "$oid": "69931d6e21d1f89e79f15252"
+  },
+  "title": "Iznajmljivanje završeno",
+  "message": "Iznajmljivanje završeno. Ukupna cena: 31.88 RSD",
+  "type": "success",
+  "read": true,
+  "relatedRental": {
+    "$oid": "69931d9f21d1f89e79f15271"
+  },
+  "createdAt": {
+    "$date": "2026-02-16T13:41:24.632Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-16T13:41:42.259Z"
+  },
+  "__v": 0
+}]

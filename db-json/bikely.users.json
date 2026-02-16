@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "698a32049af71562a0b95a6c"
+  },
+  "username": "vanja031",
+  "passwordHash": "$2b$10$jzoFuxpGmoRSlkggu1f7nOJLh9L7xRimrLXI2wJEL3pFTyAyHZ.w2",
+  "email": "vtomic03@gmail.com",
+  "firstName": "Vanja",
+  "lastName": "Tomic",
+  "phone": "+381637206734",
+  "role": "user",
+  "createdAt": {
+    "$date": "2026-02-09T19:14:12.743Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-09T19:49:57.291Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69931d6e21d1f89e79f15252"
+  },
+  "username": "marko123",
+  "passwordHash": "$2b$10$09UrVm.R8UcYTs26Woy9o.e.D5CGNex5HoRHxxP5PaLUMMZJbJiZS",
+  "email": "marko@gmail.com",
+  "firstName": "Marko",
+  "lastName": "Markovic",
+  "phone": "+381612345678",
+  "role": "user",
+  "createdAt": {
+    "$date": "2026-02-16T13:36:46.997Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-16T13:36:46.997Z"
+  },
+  "__v": 0
+}]

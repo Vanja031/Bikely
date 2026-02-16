@@ -68,7 +68,23 @@ export function AdminLayout() {
     navigate("/admin/login");
   };
 
-  const currentNav = navItems.find((item) => location.pathname.startsWith(item.to));
+  // Determine current page title
+  const getCurrentPageTitle = () => {
+    // Exact match for dashboard
+    if (location.pathname === "/admin") {
+      return "Dashboard";
+    }
+    // Find matching nav item for other routes
+    const matchedNav = navItems.find((item) => {
+      if (item.to === "/admin") {
+        return false; // Skip dashboard for other routes
+      }
+      return location.pathname.startsWith(item.to);
+    });
+    return matchedNav ? matchedNav.label : "Kontrolna tabla";
+  };
+
+  const currentPageTitle = getCurrentPageTitle();
 
   return (
     <div className="app-shell">
@@ -86,7 +102,7 @@ export function AdminLayout() {
               <NavLink
                 key={item.to}
                 to={item.to}
-                className={({ isActive, location }) => {
+                className={({ isActive }) => {
                   // For dashboard, only active if exactly on /admin
                   if (item.to === "/admin") {
                     const isDashboardActive = location.pathname === "/admin";
@@ -121,7 +137,7 @@ export function AdminLayout() {
       <div className="app-main">
         <header className="app-header">
           <div className="app-header-title">
-            {currentNav ? currentNav.label : location.pathname === "/admin" ? "Kontrolna tabla" : "Kontrolna tabla"}
+            {currentPageTitle}
           </div>
           <div className="app-header-user">
             <div className="app-header-avatar">

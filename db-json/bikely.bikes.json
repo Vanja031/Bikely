@@ -1,0 +1,147 @@
+[{
+  "_id": {
+    "$oid": "6985ec055523cee12b26309c"
+  },
+  "name": "Test 1",
+  "type": "gradski",
+  "hourlyRate": 250,
+  "status": "available",
+  "location": {
+    "lat": 44.798960612735215,
+    "lng": 20.506228820702862
+  },
+  "createdAt": {
+    "$date": "2026-02-06T13:26:29.968Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T14:14:13.180Z"
+  },
+  "__v": 0,
+  "qrCodePath": "storage\\qrcodes\\bike-6985ec055523cee12b26309c.png"
+},
+{
+  "_id": {
+    "$oid": "6985ec625523cee12b2630a2"
+  },
+  "name": "Test 2",
+  "type": "bmx",
+  "hourlyRate": 500,
+  "status": "available",
+  "location": {
+    "lat": 44.798887322040144,
+    "lng": 20.50624682524015
+  },
+  "createdAt": {
+    "$date": "2026-02-06T13:28:02.448Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-16T13:41:24.630Z"
+  },
+  "__v": 0,
+  "qrCodePath": "storage\\qrcodes\\bike-6985ec625523cee12b2630a2.png"
+},
+{
+  "_id": {
+    "$oid": "6985ee2e5523cee12b2630b6"
+  },
+  "name": "Bicikl Obican",
+  "type": "hibridni",
+  "hourlyRate": 700,
+  "status": "available",
+  "location": {
+    "lat": 44.79347332594557,
+    "lng": 20.504549145698547
+  },
+  "createdAt": {
+    "$date": "2026-02-06T13:35:42.093Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T14:21:55.312Z"
+  },
+  "__v": 0,
+  "qrCodePath": "storage\\qrcodes\\bike-6985ee2e5523cee12b2630b6.png"
+},
+{
+  "_id": {
+    "$oid": "6985f1965523cee12b2630c2"
+  },
+  "name": "Bajs",
+  "type": "elektricni",
+  "hourlyRate": 1500,
+  "status": "inactive",
+  "location": {
+    "lat": 44.815281895587006,
+    "lng": 20.491861413182093
+  },
+  "createdAt": {
+    "$date": "2026-02-06T13:50:14.588Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T14:22:22.510Z"
+  },
+  "__v": 0,
+  "qrCodePath": "storage\\qrcodes\\bike-6985f1965523cee12b2630c2.png"
+},
+{
+  "_id": {
+    "$oid": "698b409297ab664cb3f1f767"
+  },
+  "name": "Plava bicikla",
+  "type": "gradski",
+  "hourlyRate": 490,
+  "status": "available",
+  "location": {
+    "lat": 44.78679297954645,
+    "lng": 20.466999099673735
+  },
+  "createdAt": {
+    "$date": "2026-02-10T14:28:34.494Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-10T14:28:34.562Z"
+  },
+  "__v": 0,
+  "qrCodePath": "storage\\qrcodes\\bike-698b409297ab664cb3f1f767.png"
+},
+{
+  "_id": {
+    "$oid": "698b411d97ab664cb3f1f78d"
+  },
+  "name": "Test QR Koda",
+  "type": "cargo",
+  "hourlyRate": 1000,
+  "status": "available",
+  "location": {
+    "lat": 44.79889630519948,
+    "lng": 20.50624472150618
+  },
+  "createdAt": {
+    "$date": "2026-02-10T14:30:53.713Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T10:30:01.718Z"
+  },
+  "__v": 0,
+  "qrCodePath": "storage\\qrcodes\\bike-698b411d97ab664cb3f1f78d.png"
+},
+{
+  "_id": {
+    "$oid": "698b41418b7fa732355f5663"
+  },
+  "name": "Bicikla za planinu ",
+  "type": "planinski",
+  "hourlyRate": 700,
+  "status": "available",
+  "location": {
+    "lat": 44.77478945198221,
+    "lng": 20.407435944830713
+  },
+  "createdAt": {
+    "$date": "2026-02-10T14:31:29.770Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-12T10:30:54.025Z"
+  },
+  "__v": 0,
+  "qrCodePath": "storage\\qrcodes\\bike-698b41418b7fa732355f5663.png"
+}]

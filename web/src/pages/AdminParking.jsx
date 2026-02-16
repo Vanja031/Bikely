@@ -181,7 +181,6 @@ export function AdminParking() {
     <div className="admin-parking-page">
       <div className="bikes-header">
         <div>
-          <div className="bikes-title">Parking mesta</div>
           <div style={{ fontSize: 14, color: "var(--text-light)" }}>
             Pregled i dodavanje parking mesta na mapi.
           </div>

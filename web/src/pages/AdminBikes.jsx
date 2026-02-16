@@ -288,7 +288,6 @@ export function AdminBikes() {
     <div>
       <div className="bikes-header">
         <div>
-          <div className="bikes-title">Bicikli</div>
           <div style={{ fontSize: 14, color: "var(--text-light)" }}>
             Pregled dostupnih bicikala, statusa i lokacija.
           </div>
